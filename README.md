@@ -1,8 +1,39 @@
-# React + Vite
+# Expolding Kitten
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Online Single Player Game
 
-Currently, two official plugins are available:
+# Setting Up the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Install Node.js and npm
+
+If you haven't already, download and install Node.js from the [official website](https://nodejs.org/).
+
+## 2. Verify Node.js and npm Installation
+
+Open your terminal and type the following command to check if Node.js and npm are installed correctly:
+
+```bash
+  node -v
+```
+
+## 3. Clone Repo and Navigate to Directory
+
+To clone the repository and navigate to the directory, run the following command in your terminal
+
+```bash
+  git clone https://github.com/Narendira27/Exploding-Kitten-Frontend
+
+  cd Exploding-Kitten-Frontend
+```
+
+## 4. Install Dependencies
+
+```bash
+  npm install
+```
+
+## 5. Start React App
+
+```bash
+  npm run dev
+```
