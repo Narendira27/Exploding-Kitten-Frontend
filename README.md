@@ -22,7 +22,9 @@ To clone the repository and navigate to the directory, run the following command
 
 ```bash
   git clone https://github.com/Narendira27/Exploding-Kitten-Frontend
+```
 
+```bash
   cd Exploding-Kitten-Frontend
 ```
 
