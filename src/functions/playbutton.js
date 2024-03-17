@@ -15,7 +15,9 @@ const serverReq = async (username) => {
 const OnPlayButton = async (username, setPageStatus, setHighestScore, setScore, setCardsList, setLoading) => {
     if (username.length !== 0) {
         setPageStatus("play")
+        setLoading(true)
         const res = await serverReq(username)
+        setLoading(false)
         setHighestScore(res.highestscore)
         setScore(res.lastscore)
         const list = GendrateRandomCards()

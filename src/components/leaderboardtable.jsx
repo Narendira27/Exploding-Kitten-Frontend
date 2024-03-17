@@ -1,7 +1,6 @@
 const LeaderboardTableElement = ({ data }) => {
-    console.log(data)
     return (
-        <di className="flex flex-col justify-center items-center mt-10">
+        <div className="flex flex-col justify-center items-center mt-10">
             <table className="w-3/5 ">
                 <tr className="w-3/5 bg-slate-100 ">
                     <th className="text-lg p-3 ">Name</th>
@@ -15,9 +14,8 @@ const LeaderboardTableElement = ({ data }) => {
                 }
 
             </table>
-        </di>
+        </div>
     )
-
 }
 
 export default LeaderboardTableElement

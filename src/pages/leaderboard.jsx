@@ -11,7 +11,14 @@ const LeaderBoardPage = () => {
     const LeaderBoardDetails = UseLeaderBoardDetails()
     const navigate = useNavigate()
 
-    return LeaderBoardDetails.isLoading ? <Loader />
+    const LoadingContainer = () => {
+        return (
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+                <Loader />
+            </div>)
+    }
+
+    return LeaderBoardDetails.isLoading ? LoadingContainer()
         : (<div className="p-5 h-screen w-screen overflow-auto ">
             <HeadingElement text={"Leaderboard"} styleType={"style-2"} style={"sm:text-4xl text-xl"} />
             <DescriptionElement text={"Top Players"} styleType={"style-2"} />

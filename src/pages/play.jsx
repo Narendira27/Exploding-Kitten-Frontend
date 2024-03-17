@@ -16,17 +16,18 @@ const PlayPage = () => {
     // state 
     const [pageStaus, setPageStatus] = useState("initial") // initial , play , gameover
 
+    const [loading, setLoading] = useState(false)
+
     const [cardsList, setCardsList] = useState([])
 
     const [defuse, setDefuse] = useState(0)
-
-    const [loading, setLoading] = useState(false)
 
     const [username, setUsername] = useState("")
 
     const [score, setScore] = useState(0)
 
     const [highestScore, setHighestScore] = useState(0)
+
 
     //fn
 
@@ -39,7 +40,7 @@ const PlayPage = () => {
 
         switch (pageStaus) {
             case "initial":
-                return <GameInitialElement onclick={() => OnPlayButton(username, setPageStatus, setHighestScore, setScore, setCardsList)} onchange={(e) => setUsername(e)} />
+                return <GameInitialElement onclick={() => OnPlayButton(username, setPageStatus, setHighestScore, setScore, setCardsList, setLoading)} onchange={(e) => setUsername(e)} />
             case 'play':
                 return <GamePlayElement defuse={defuse} score={score} highestScore={highestScore} cardsList={cardsList} onclickCard={(id, name) => { clickCard(id, name) }} />
 
@@ -49,6 +50,13 @@ const PlayPage = () => {
 
     }
 
+    const LoadingContainer = () => {
+        return (
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+                <Loader />
+            </div>)
+    }
+
     const render = () => {
         if (!loading) {
             return (<div className="h-screen w-screen bg-white ">
@@ -56,7 +64,7 @@ const PlayPage = () => {
                 {renderPage()}
             </div>)
         }
-        return <Loader />
+        return LoadingContainer()
     }
 
     return render()
